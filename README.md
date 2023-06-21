@@ -2,6 +2,7 @@
 Authentication using JSON Web Tokens (JWT) is a popular method for implementing secure authentication and authorization in web applications and APIs. JWT is a compact, URL-safe token format that contains encoded information, allowing it to securely represent claims between two parties.
 
 - **USERNAME AND PASSWORD FOR THIS PROJECT IS STATIC(DATABASE LAYER IS NOT IMPLEMENTED USERNAME AND PASSWORD CAN BE FETCH FROM DATABASE).**
+- SECRET KEY has been declared  in application.ylm file
 
 1. **GET** http://localhost:8080/  //Will return user a message if the user is authentic (using token) else it will show "**_access to localhost was denied_**".
  ![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/9a58efc0-736c-4027-823d-125598cd7221)
