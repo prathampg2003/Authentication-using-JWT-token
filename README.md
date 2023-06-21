@@ -19,7 +19,9 @@ Authentication using JSON Web Tokens (JWT) is a popular method for implementing 
 
 - **WHAT ACTUALLY TOKEN CONTAINS :-HEADER,PAYLOAD,SIGNATURE**
 - It is generally not advised to put sensitive or large amounts of data in the payload of a JSON Web Token (JWT).The payload of a JWT is not encrypted; it is only base64-encoded. Including sensitive data in the payload exposes it to potential security risks. If an attacker gains access to the JWT, they can easily decode the payload and access the information.
-![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/b86de4d0-056c-439f-b712-0aa6bdb11e04)
+![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/b86de4d0-056c-439f-b712-0aa6bdb11e04).
+
+-- **For more info on how it actually works checkout HOW IT WORKS!! FILE available in same repository**
 
 
 
