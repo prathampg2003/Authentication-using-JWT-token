@@ -1,25 +1,21 @@
 # Authentication-using-JWT-token
 Authentication using JSON Web Tokens (JWT) is a popular method for implementing secure authentication and authorization in web applications and APIs. JWT is a compact, URL-safe token format that contains encoded information, allowing it to securely represent claims between two parties.
 
-Below is the actual working :
-1. Frontend:
-   - Collects the user's credentials (e.g., username and password) through a login form or user interface.
-   - Sends the user's credentials securely to the backend for authentication.
-2. Backend:
-   - Receives the user's credentials from the frontend.
-   - Authenticates the user by verifying the credentials against a database or other authentication system.
-   - If the credentials are valid, the backend generates a token (e.g., JWT) using a library or framework specifically designed for token generation.
-   - The token is typically signed by the backend using a secret key or private key.
-   - The generated token is then sent back to the frontend as a response to the login request.
-3. Frontend:
-   - Receives the token from the backend as part of the response to the login request.
-   - Stores the token securely, typically using browser storage mechanisms like local Storage, sessionStorage, or secure HTTP-only cookies.
-   - Includes the token in subsequent requests to the backend, typically in the Authorization header using the "Bearer" scheme.
-4. Backend:
-   - Receives subsequent requests from the frontend that include the token in the Authorization header.
-   - Verifies the authenticity and validity of the token by checking the signature or using the secret key or public key associated with the token.
-   - Performs authentication and authorization checks based on the extracted token information.
-   - Responds to the frontend request based on the authentication and authorization results.
+-USERNAME AND PASSWORD FOR THIS PROJECT IS STATIC(DATABASE LAYER IS NOT IMPLEMENTED)
 
-In summary, while the frontend collects user credentials and includes the token in subsequent requests, the backend is responsible for generating the token, verifying its authenticity, and performing authentication and authorization checks
+- **GET** http://localhost:8080/  //Will return user a message if the user is authentic (using token) else it will show "**_access to localhost was denied_**".
+ ![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/9a58efc0-736c-4027-823d-125598cd7221)
+
+
+- **POST** http://localhost:8080/authenticate //Need to POST username and password(password is encoded) if it matches then it generates a JWT token with expiration
+ time as 5hrs.
+ ![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/b8187db7-0067-4292-b3c2-b59bbd984bdb)
+
+- After generation of token if we will again hit the GET api with authorization-**type bearer** and above generated token ||**the message will be displayed**||.
+![image](https://github.com/pg348/Authentication-using-JWT-token/assets/89197939/b42349b7-236b-4915-81ba-d98da4f40916)
+
+
+- ALGO USED "HS512".
+
+OUTCOME:- while the frontend collects user credentials and includes the token in subsequent requests, the backend is responsible for generating the token, verifying its authenticity, and performing authentication and authorization checks
 
